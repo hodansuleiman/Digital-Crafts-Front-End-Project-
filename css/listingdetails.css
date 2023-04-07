@@ -1,0 +1,56 @@
+
+body{
+    /* background-image: url("../images/0.jpg");
+     background-size: cover;
+     */
+     background-color: #EDEDE9;
+     box-sizing: border-box;
+     height: 100%;
+     padding: 0;
+     margin: 0;
+     padding: 20px;
+ }
+ 
+
+#details{
+    background-color: #F5EBE0;
+    max-width: 50%;
+}
+img{
+    max-width: 100%;
+   
+}
+
+
+header{
+    background-color: #D5BDAF ;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+footer{
+    background-color: #D5BDAF ;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+#contactForm{
+width: 50%;
+}
+/*  
+//h1{
+    flex-direction: "row";
+}
+.col{
+    widht: 50%
+}
+@media (max-width: 1250px) {
+    h1{
+        flex-direction: "column";
+    }
+    .col{
+        widht: 100%
+    }
+  }
+
+  */
