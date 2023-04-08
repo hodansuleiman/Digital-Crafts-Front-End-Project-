@@ -3,54 +3,46 @@ body{
     /* background-image: url("../images/0.jpg");
      background-size: cover;
      */
-     background-color: #EDEDE9;
+     background-color: white;
      box-sizing: border-box;
      height: 100%;
      padding: 0;
      margin: 0;
-     padding: 20px;
+
  }
  
-
-#details{
-    background-color: #F5EBE0;
-    max-width: 50%;
+#mainBox{
+    padding: 0px 20px;
 }
-img{
+
+
+#details img{
     max-width: 100%;
+    border-radius: 10px;
    
 }
 
-
-header{
-    background-color: #D5BDAF ;
-    flex-grow: 0;
-    flex-shrink: 0;
+#details p {
+    margin-bottom: 0px;
 }
 
-footer{
-    background-color: #D5BDAF ;
-    flex-grow: 0;
-    flex-shrink: 0;
+#details .btn{
+    float: right;
 }
 
-#contactForm{
-width: 50%;
+h4{
+    font-size: 1.3rem;
+    margin-top: 10px;
 }
-/*  
-//h1{
-    flex-direction: "row";
-}
-.col{
-    widht: 50%
-}
-@media (max-width: 1250px) {
-    h1{
-        flex-direction: "column";
-    }
-    .col{
-        widht: 100%
-    }
-  }
 
-  */
+
+
+#mainBox{
+    display: flex;
+    justify-content: center;
+}
+
+#mainBox > div{
+    max-width: 500px;
+    padding: 20px 0px;
+}

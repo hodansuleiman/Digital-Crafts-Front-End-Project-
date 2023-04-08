@@ -18,13 +18,19 @@ function numberWithCommas(x) { // add comma to number // takes a number as an ar
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  //instead of wrting create element and text conent multiple times
+  //i created a function to handle it all
+  //all you need to dis pass in 4 values
+  //value is the textcontent
+  //targetEl is what we add it to
+  //exists check if it is undefined then dont do it or return
 
 function createLine(value, targetEl, exist, tag = "p"){ // utility function that creates a new element with the specified tag and text content, and appends it to the specified target element if the exist parameter is not undefined
     console.log("check?", exist);
     if(exist === undefined){
-        return ""
+        return "" //stop!! nothing is here go back
     }
-    let tempEl = document.createElement(tag);
+    let tempEl = document.createElement(tag); // 
     tempEl.textContent = value;
     targetEl.appendChild(tempEl);
 
@@ -45,10 +51,10 @@ fetch(query, {
     let imgEl = document.createElement("img"); // creates new image element 
     imgEl.setAttribute("src", "./images/" + imgId + ".jpg");
     detailsEl.appendChild(imgEl) // appends the image element to the detailsEL element 
-
-    createLine(data.formattedAddress, detailsEl, data.formattedAddress, "h2"); // creates a new h2 element with the formatted address of the property and appends it the detailsEL element 
+    
+    createLine( "$" + numberWithCommas(data.price), detailsEl, data.price, "h4");
+    createLine(data.formattedAddress, detailsEl, data.formattedAddress, "p"); // creates a new h2 element with the formatted address of the property and appends it the detailsEL element 
     createLine("Property Type: " + data.propertyType, detailsEl, data.propertyType); // creates a new p element with the property type and appends it to the listingEL element 
-    createLine( "$" + numberWithCommas(data.price), detailsEl, data.price);
     createLine(data.squareFootage + "sqft", detailsEl, data.squareFootage);
     createLine("Bedrooms: " + data.bedrooms, detailsEl, data.bedrooms);
     createLine("Bathroom:" + data.bathrooms, detailsEl, data.bathrooms);
@@ -57,7 +63,7 @@ fetch(query, {
 
     let interestedBtn = document.createElement("button");
     interestedBtn.textContent = "Interested?";
-    interestedBtn.classList = "btn btn-primary";
+    interestedBtn.classList = "btn btn-custom";
     detailsEl.appendChild(interestedBtn)
     interestedBtn.addEventListener("click",()=>{
         contactForm.style.display = "block";
