@@ -73,7 +73,7 @@ submitBtn.addEventListener("click",(event)=>{
     fetch(query,{
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '073e8d9172mshdb82d5e4353d0c8p10487bjsnc51b2de1e97b',
+            'X-RapidAPI-Key': '895330df93msh40f148931910f69p106b46jsne4b177d33d16',
             'X-RapidAPI-Host': 'realty-mole-property-api.p.rapidapi.com'
         }
     })
